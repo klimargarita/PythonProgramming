@@ -4,7 +4,7 @@ def count_letters(main_str):
     low_str = main_str.lower()
     for letter in low_str:
         if letter.isalpha():
-            letter_count[letter]=letter_count.get(letter, default_count)+1
+            letter_count[letter]=letter_count.get(letter, default_count) + 1
     return letter_count
 
 def calculate_frequency(letter_count):

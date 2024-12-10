@@ -1,12 +1,10 @@
 def count_letters(main_str):
     letter_count = {}
+    default_count = 0
     low_str = main_str.lower()
     for letter in low_str:
         if letter.isalpha():
-            if letter in letter_count:
-                letter_count[letter] += 1
-            else:
-                letter_count[letter] = 1
+            letter_count[letter]=letter_count.get(letter, default_count)+1
     return letter_count
 
 def calculate_frequency(letter_count):
@@ -54,6 +52,7 @@ main_str = """
 
 letter_count = count_letters(main_str)
 frequency = calculate_frequency(letter_count)
+
 
 for letter, freq in frequency.items():
     print(f"{letter}: {freq:.2f}")

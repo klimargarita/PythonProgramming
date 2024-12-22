@@ -5,7 +5,6 @@ def task() -> float:
 
     with open('input.json', 'r', encoding='utf-8') as json_file:
         data = json.load(json_file)
-
         for entry in data:
             score = entry.get("score", 0)
             weight = entry.get("weight", 0)
